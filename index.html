@@ -306,21 +306,24 @@
 		</div>
 		<div class="choose animate-box" id="contact">
 			<h2 style="color: red;">Get In Touch</h2>
-			<form  action="mailto:bws3883@gmail.com" method="post" enctype="text/plain">
+			<form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+          action="https://script.google.com/macros/s/AKfycbwrs5KWHzYdT98NyChDUHYPPRIT55dX1nb8RzmZVA/exec">
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" name="firstname" id="fname" class="form-control" placeholder="Your firstname">
+						<input type="text" name="firstname" id="first name" class="form-control" placeholder="Your firstname">
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" name="lastname" id="lname" class="form-control" placeholder="Your lastname">
+						<input type="text" name="lastname" id="last name" class="form-control" placeholder="Your lastname">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" name="email" id="email" class="form-control" placeholder="Your email address">
+						<input type="email" name="email" id="email" class="form-control" placeholder="Your email address">
+       					 <span class="email-invalid" style="display:none">
+        					Must be a valid email address</span>
 					</div>
 				</div>
 
@@ -336,8 +339,18 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<input type="submit" value="Send Message" class="btn btn-primary">
+					<button type="submit" class="btn btn-primary">
+        				Send Message
+        			</button>
 				</div>
+				
+					 <!-- Customise the Thankyou Message People See when they submit the form: -->
+   				 <div style="display:none;" class="thankyou_message">
+       				 <h2>
+           				 <em style="color: red;">Thanks</em> for contacting me!
+           				 I will get back to you soon!
+       				 </h2>
+   				 </div>
 
 			</form>	
 		</div>
@@ -356,6 +369,11 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
+
+	<!-- Customise the Thankyou Message People See when they submit the form: -->
+    <script data-cfasync="false" type="text/javascript"
+            src="js/form-submission-handler.js">
+    </script>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
